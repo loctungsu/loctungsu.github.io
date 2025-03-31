@@ -1,0 +1,30 @@
+<!DOCTYPE html> <!-- This is the "declaration". Let the browser know it is a HTML file. Important-->
+<html> <!-- Defines the root of an HTML document -->
+    <head> <!-- The start of the website -->
+        <title>
+            GEOG 485L/585L -- My First Map <!--Display the text on browser tab-->
+        </title> 
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"> <!--Link a file to this file-->
+        <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script> <!--Invoke the file call-->
+    </head>
+    <body> <!-- The body of the website -->
+        <p> <!-- Paragraph tag -->
+            My first map will be here:
+        </p>
+        <a href="https://www.w3schools.com/tags/">W3S tags</a>
+        <div id="mapID" style = "height: 400px; width: 600px"> </div>
+        <script>
+            // Bandelier Hall East lat/long: 35.0843° N, 106.6241° W
+            // Create a map variable "mymap" that points to the map placed in the mapId <div> section
+            // Zoom the view on Bandelier Hall East building at a 17 zoom level
+            var mymap = L.map('mapID').setView([35.0843, -106.6241],17);
+            // var mymap = L.map('mapID').setView([10.791967, 106.708842],17);
+
+            // Create a var name "osm" that is used to hold OpenStreetMap tile layer
+            var osm = new L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png');
+
+            // Add the OpenStreetMap tile layer (i.e., the variable "osm" you defined above) to the map
+            osm.addTo(mymap);
+        </script>
+    </body>
+</html>
