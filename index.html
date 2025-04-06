@@ -1,30 +1,204 @@
-<!DOCTYPE html> <!-- This is the "declaration". Let the browser know it is a HTML file. Important-->
+<!DOCTYPE html>
+<!-- This is the "declaration". Let the browser know it is a HTML file. Important-->
 <html> <!-- Defines the root of an HTML document -->
     <head> <!-- The start of the website -->
         <title>
-            GEOG 485L/585L -- My First Map <!--Display the text on browser tab-->
-        </title> 
-        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"> <!--Link a file to this file-->
-        <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script> <!--Invoke the file call-->
+            L. Su
+        </title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet"
+            href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat"
+            rel="stylesheet">
+        <link rel="stylesheet" href="index.css"> <!--Link a file to this file-->
+
+        <script
+            src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+        <!-- Add this -->
+        <script
+            src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script
+            src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <!-- <script src="index.js"></script>  -->
+        <script src="JS/age.js"></script>
+
     </head>
-    <body> <!-- The body of the website -->
-        <p> <!-- Paragraph tag -->
-            My first map will be here:
-        </p>
-        <a href="https://www.w3schools.com/tags/">W3S tags</a>
-        <div id="mapID" style = "height: 400px; width: 600px"> </div>
-        <script>
-            // Bandelier Hall East lat/long: 35.0843° N, 106.6241° W
-            // Create a map variable "mymap" that points to the map placed in the mapId <div> section
-            // Zoom the view on Bandelier Hall East building at a 17 zoom level
-            var mymap = L.map('mapID').setView([35.0843, -106.6241],17);
-            // var mymap = L.map('mapID').setView([10.791967, 106.708842],17);
+    <body data-spy="scroll" data-target=".navbar" data-offset="50">
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle"
+                        data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">Loc Su <span
+                            id="age"></span> </a>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#about">About</a></li>
+                        <!-- you can create a html file called who.html and then replace the href="#" to href="who.html" to go to that html page -->
+                        <!-- here dr.yang used an id named "who" to link to the heading later in this same page  -->
+                        <li><a href="#cv">CV</a></li>
+                        <!-- do the same for who.html page, but here need what.html -->
+                        <!-- here dr.yang used an id named "what" to link to the heading later in this same page  -->
+                        <li><a href="#projects">Projects</a></li>
+                        <!-- do the same for who.html page, but here need where.html -->
+                        <!-- here dr.yang used an id named "where" to link to the heading later in this same page  -->
+                        <li><a href="#contact">Contact</a></li>
+                        <!-- do the same for who.html page, but here need where.html -->
+                        <!-- here dr.yang used an id named "where" to link to the heading later in this same page  -->
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- First Container -->
+        <div id="about" class="container-fluid">
+            <h1>About </h1>
+            <p>My full name is Su Tung Loc (English name is Tony), 23 years old, and I am an international student from Vietnam. 
 
-            // Create a var name "osm" that is used to hold OpenStreetMap tile layer
-            var osm = new L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png');
-
-            // Add the OpenStreetMap tile layer (i.e., the variable "osm" you defined above) to the map
-            osm.addTo(mymap);
-        </script>
+                I am currently majoring in computer science at the University of New Mexico. Recently, I graduated with a bachelor’s degree in computer science. I started UNM’s Computer Science graduate program in Fall 2024.
+            </p>
+            <p>
+                While pursuing my Master degree, I want to focus on some specific field:
+            </p>
+            <ul>
+                <li>Machine Learning</li>
+                <li>Artificial Intelligence</li>
+                <li>Cyber Security</li>
+            <ul>
+            <p>You can visit my CV to see my resume, research papers, and more of my interests.</p>
+            <p>Try to scroll this section and look at the navigation bar while
+                scrolling! Try to scroll this section and look at the navigation
+                bar while scrolling!</p>
+            <p>Try to scroll this section and look at the navigation bar while
+                scrolling! Try to scroll this section and look at the navigation
+                bar while scrolling!</p>
+            <p>Try to scroll this section and look at the navigation bar while
+                scrolling! Try to scroll this section and look at the navigation
+                bar while scrolling!</p>
+            <p>Try to scroll this section and look at the navigation bar while
+                scrolling! Try to scroll this section and look at the navigation
+                bar while scrolling!</p>
+            <p>Try to scroll this section and look at the navigation bar while
+                scrolling! Try to scroll this section and look at the navigation
+                bar while scrolling!</p>
+            <p>Try to scroll this section and look at the navigation bar while
+                scrolling! Try to scroll this section and look at the navigation
+                bar while scrolling!</p>
+            <p>Try to scroll this section and look at the navigation bar while
+                scrolling! Try to scroll this section and look at the navigation
+                bar while scrolling!</p>
+        </div>
+        <!-- Second Container -->
+        <div id="cv" class="container-fluid">
+            <h1>Section 2</h1>
+            <p>Try to scroll this section and look at the navigation bar while
+                scrolling! Try to scroll this section and look at the navigation
+                bar while scrolling!</p>
+            <p>Try to scroll this section and look at the navigation bar while
+                scrolling! Try to scroll this section and look at the navigation
+                bar while scrolling!</p>
+            <p>Try to scroll this section and look at the navigation bar while
+                scrolling! Try to scroll this section and look at the navigation
+                bar while scrolling!</p>
+            <p>Try to scroll this section and look at the navigation bar while
+                scrolling! Try to scroll this section and look at the navigation
+                bar while scrolling!</p>
+            <p>Try to scroll this section and look at the navigation bar while
+                scrolling! Try to scroll this section and look at the navigation
+                bar while scrolling!</p>
+            <p>Try to scroll this section and look at the navigation bar while
+                scrolling! Try to scroll this section and look at the navigation
+                bar while scrolling!</p>
+            <p>Try to scroll this section and look at the navigation bar while
+                scrolling! Try to scroll this section and look at the navigation
+                bar while scrolling!</p>
+            <p>Try to scroll this section and look at the navigation bar while
+                scrolling! Try to scroll this section and look at the navigation
+                bar while scrolling!</p>
+        </div>
+        <!-- Third Container -->
+        <div id="projects" class="container-fluid">
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                  <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                  <li data-target="#myCarousel" data-slide-to="1"></li>
+                  <li data-target="#myCarousel" data-slide-to="2"></li>
+                </ol>
+            
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner">
+            
+                  <div class="item active">
+                    <img src="la.jpg" alt="Los Angeles" style="width:100%;">
+                    <div class="carousel-caption">
+                      <h3>Los Angeles</h3>
+                      <p>LA is always so much fun!</p>
+                    </div>
+                  </div>
+            
+                  <div class="item">
+                    <img src="chicago.jpg" alt="Chicago" style="width:100%; height:auto">
+                    <div class="carousel-caption">
+                      <h3>Chicago</h3>
+                      <p>Thank you, Chicago!</p>
+                    </div>
+                  </div>
+                
+                  <div class="item">
+                    <img src="ny.jpg" alt="New York" style="width:100%;">
+                    <div class="carousel-caption">
+                      <h3>New York</h3>
+                      <p>We love the Big Apple!</p>
+                    </div>
+                  </div>
+              
+                </div>
+            
+                <!-- Left and right controls -->
+                <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                  <span class="glyphicon glyphicon-chevron-left"></span>
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                  <span class="glyphicon glyphicon-chevron-right"></span>
+                  <span class="sr-only">Next</span>
+                </a>
+              </div>
+        </div>
+        <div id="contact" class="container-fluid">
+            <h2 class="text-center">CONTACT</h2>
+            <div class="row">
+                <div class="col-sm-5">
+                <p>Contact us and we'll get back to you within 24 hours.</p>
+                <p><span class="glyphicon glyphicon-map-marker"></span> New Mexico, US</p>
+                <p><span class="glyphicon glyphicon-phone"></span> +1 999 666 999</p>
+                <p><span class="glyphicon glyphicon-envelope"></span> locsu@unm.edu</p>
+                </div>
+                <div class="col-sm-7 slideanim">
+                <div class="row">
+                    <div class="col-sm-6 form-group">
+                    <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+                    </div>
+                    <div class="col-sm-6 form-group">
+                    <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+                    </div>
+                </div>
+                <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
+                <div class="row">
+                    <div class="col-sm-12 form-group">
+                    <button class="btn btn-default pull-right" type="submit">Send</button>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
     </body>
 </html>
