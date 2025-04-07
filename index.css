@@ -74,3 +74,6 @@ p {
 html {
   scroll-behavior: smooth;
 }
+li {
+  font-size: 17px;
+}
