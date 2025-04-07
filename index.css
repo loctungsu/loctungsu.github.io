@@ -12,29 +12,6 @@ p {
   margin-bottom: 45px;
 }
 
-.bg-1 {
-  background-color: #1abc9c;
-  /* Green */
-  color: #ffffff;
-}
-
-.bg-2 {
-  background-color: #474e5d;
-  /* Dark Blue */
-  color: #ffffff;
-}
-
-.bg-3 {
-  background-color: #ffffff;
-  /* White */
-  color: #555555;
-}
-
-.bg-4 {
-  background-color: #2f2f2f;
-  /* Black Gray */
-  color: #fff;
-}
 
 .container-fluid {
   padding-top: 70px;
@@ -49,12 +26,38 @@ p {
   margin-bottom: 0;
   font-size: 12px;
   letter-spacing: 5px;
-  color: #56ad9c;
+  background-color: #4c3c3c;
+  /* color: #56ad9c; */
 }
 
 .navbar-nav li a:hover {
   color: #0b8d73 !important;
 }
+/* Circle
+nav.circle ul li a {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+nav.circle ul li a:after {
+  display: block;
+  position: absolute;
+  margin: 0;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  content: '.';
+  color: transparent;
+  width: 1px;
+  height: 1px;
+  border-radius: 50%;
+  background: transparent;
+}
+nav.circle ul li a:hover:after {
+  -webkit-animation: circle 1.5s ease-in forwards;
+} */
+
 #about {
   margin-top: 80px;
   padding:110px;
@@ -74,6 +77,12 @@ p {
 html {
   scroll-behavior: smooth;
 }
+ul {
+  margin: 0;
+  padding: 0;
+}
 li {
+  margin-left: 40px;
+  margin-top: 0px;
   font-size: 17px;
 }
