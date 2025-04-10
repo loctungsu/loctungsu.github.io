@@ -8,9 +8,9 @@ p {
   font-size: 16px;
 }
 
-.margin {
+/* .margin {
   margin-bottom: 45px;
-}
+} */
 
 
 .container-fluid {
@@ -84,5 +84,34 @@ ul {
 li {
   margin-left: 40px;
   margin-top: 0px;
+  margin-bottom: 0px;
   font-size: 17px;
+}
+.school {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  /* text-align: center; */
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  font-weight: bold;
+}
+
+.cv_header {
+  text-align: center;
+}
+.jobs {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  font-weight: bold;
+}
+
+.carousel-inner .item img {
+  width: 100%;
+  height: 500px; /* set your desired fixed height */
+  object-fit: contain;
+  /* background-color: #000; */
+}
+
+.carousel-caption {
+  color: #000000; /* yellowish text */
 }
