@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>NYC Tree Census App</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- CSS -->
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="JS_CSS_downloaded_libraries/bootstrap-5.3.5-dist/css/bootstrap.min.css">
+  <!-- Our custom CSS -->
+  <link rel="stylesheet" href="myCSS_styleFiles/myStyle.css">
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="JS_CSS_downloaded_libraries/leaflet/leaflet.css">
+  <!-- DC CSS -->
+  <link rel="stylesheet" href="JS_CSS_downloaded_libraries/DC/dc.css">
+  <!-- MarkerClustering CSS -->
+  <link rel="stylesheet" href="JS_CSS_downloaded_libraries/leaflet-cluster/MarkerCluster.css" />
+  <link rel="stylesheet" href="JS_CSS_downloaded_libraries/leaflet-cluster/MarkerCluster.Default.css" />
+  <!-- Scripts -->
+  <!-- D3.js -->
+  <script src="JS_CSS_downloaded_libraries/bootstrap-5.3.5-dist/js/d3.js"></script>
+  <!-- Leaflet JS -->
+  <script src="JS_CSS_downloaded_libraries/leaflet/leaflet.js"></script>
+  <!-- Bootstrap JS -->
+  <script src="JS_CSS_downloaded_libraries/bootstrap-5.3.5-dist/js/bootstrap.bundle.min.js"></script>
+  <!-- jQuery -->
+  <script src="JS_CSS_downloaded_libraries/bootstrap-5.3.5-dist/js/jquery-3.7.1.min.js"></script>
+  <!-- Crossfilter -->
+  <script src="JS_CSS_downloaded_libraries/Crossfilter/crossfilter.min.js"></script>
+  <!-- DC -->
+  <script src="JS_CSS_downloaded_libraries/DC/dc.js"></script>
+  <!-- MakerClusterings -->
+  <script src="JS_CSS_downloaded_libraries/leaflet-cluster/leaflet.markercluster.js"></script>
+  <!-- Our custom JS -->
+  <script src="myJS_scripts/script.js"></script>
+</head>
+
+<body>
+  <!-- Boostrap Modal Popup -->
+  <div id="app" class="container py-2">
+    <div class="py-2">
+      <div class="modal" id="introModal">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">NYC Tree Census Web Map</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <h1><strong>Welcome to the NYC Tree Census Web Map!</strong></h1>
+              <p>
+                Street trees are more than just part of the scenery—they’re essential to urban life. They offer shade,
+                clean our air, reduce noise, support wildlife, and make our neighborhoods more livable and beautiful. 🌳
+              </p>
+              <p>
+                This interactive website is built around data from the 2015 NYC Tree Census, a comprehensive inventory
+                of every street tree in New York City. Inspired by the scale and energy of NYC, we created this platform
+                to help users explore the city’s urban forest like never before.
+              </p>
+              <p>
+                Here, you can dive into questions such as:
+              </p>
+              <ul>
+                <li>How many trees grow in each borough or neighborhood?</li>
+                <li>What species are most common—or unique?</li>
+                <li>Which areas have the greatest tree diversity?</li>
+                <li>How do human activities affect the health of urban trees?</li>
+              </ul>
+              <p>
+                Explore the map, search for species, and discover patterns through interactive charts. Let’s uncover the
+                story of NYC’s trees—one branch at a time.
+              </p>
+              <div class="alert alert-danger mt-3">
+                <strong>NOTE:</strong> Due to Leaflet processing constraints, only ~50,000 points are displayed at one
+                time.
+                Please only select one borough at a time. Thank you.
+              </div>
+              <p>
+                This project was developed by students at the University of New Mexico as part of a geospatial web
+                mapping course.
+              </p>
+              <h5><strong>Team Members:</strong></h5>
+              <p>
+              <ul>
+                <li><a href="https://clblumhardt.github.io/" target="_blank">Cameron Blumhardt</a>; cblumhardt@unm.edu
+                </li>
+                <li><a href="https://cartergibbons.github.io/" target="_blank">Carter Gibbons</a>; cgibbons1@unm.edu
+                </li>
+                <li><a href="https://loctungsu.github.io/" target="_blank">Loc Su</a>; locsu@unm.edu</li>
+                <li><a href="https://saghisarafi.github.io/" target="_blank">Saghi Sarafi</a>; saghi3@unm.edu</li>
+              </ul>
+              </p>
+              <h5>Project Advisor:</h5>
+              <p><a href="https://www.lipingyang.org/" target="_blank">Dr. Liping Yang</a>; lipingyang@unm.edu</p>
+              <h5>🌿<strong> Acknowledgements</strong></h5>
+              <p>We gratefully acknowledge the following:</p>
+              <ul>
+                <li><strong>Dr. Liping Yang</strong>, for her expert guidance and instruction in GEOG 485L/585L
+                  (Geospatial Web Mapping) at the University of New Mexico.</li>
+                <li><strong>University of New Mexico (UNM)</strong>, for supporting our education and providing
+                  resources to build this geospatial application.</li>
+                <li><strong>NYC Open Data</strong>, for offering open access to the 2015 Tree Census dataset used in
+                  this project.</li>
+                <li>The open-source community for libraries such as <strong>Leaflet</strong>, <strong>DC.js</strong>,
+                  <strong>D3.js</strong>,
+                  <strong>crossfilter.js</strong>, and <strong>Bootstrap</strong>—essential tools in building our web
+                  application.
+                </li>
+              </ul>
+              <p>This project is developed in Spring 2025 by a team of graduate students at UNM as part of our final
+                project for GEOG 485L/585L.</p>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="#overview" id="refreshMapBtn">New York City Tree Census Map</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#introModal">Overview</a>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="#treemap">Map</a></li>
+          <li class="nav-item"><a class="nav-link" href="#chart">Charts</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+
+  <!-- Second Container -->
+  <div class="container-fluid" id="treemap" style="position: relative;">
+
+    <div id="mapID" style="width: 100%; height: 800px; margin: 0 auto;">
+      <div id="mapTitle">
+        NYC Tree Census Map
+      </div>
+      <div id="mapOption">
+        <h4 class="text-center"><strong>Boroughs </strong><small><a class="text" href="#"
+              id="refreshborough">Reset</a></small></h4>
+        <div class="borough-options">
+          <div class="borough-container">
+            <div id="chart-ring-borough" class="chart"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Third Container for Charts -->
+  <div class="container-fluid" id="chart" style="position: relative;">
+
+    <!-- Row for charts -->
+    <div class="row justify-content-center">
+      <!-- Data Count Display -->
+      <div class="row mt-3">
+        <div class="col-12 text-center">
+          <div id="data-count"></div>
+        </div>
+        <!-- Borough Chart -->
+        <div class="col-md-4">
+          <h3 class="text-center">Tree Count Chart <small><a class="text" href="#"
+                id="refreshborough2">Reset</a></small></h3>
+          <div id="borough-chart" class="chart"></div>
+        </div>
+
+        <!-- Species Chart -->
+        <div class="col-md-4">
+          <h3 class="text-center">Species Chart <small><a class="text" href="#" id="refreshspecies">Reset</a></small>
+          </h3>
+          <div id="species-chart" class="chart"></div>
+          
+        </div>
+        <!-- Status -->
+        <div class="col-md-4">
+          <h3 class="text-center">Tree Health Chart <small><a class="text" href="#" id="refreshhealth">Reset</a></small>
+          </h3>
+          <div id="health-chart" class="chart"></div>
+        </div>
+
+      </div>
+    </div>
+
+
+  </div>
+
+</body>
+
+</html>

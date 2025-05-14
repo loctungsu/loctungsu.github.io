@@ -1,0 +1,278 @@
+/* === FONT IMPORTS === */
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../fonts/Montserrat/static/Montserrat-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../fonts/Montserrat/static/Montserrat-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+/* === BASE STYLES === */
+body {
+  background-color: #f6f5f0;
+  font-family: 'Montserrat', Arial, sans-serif;
+  color: #2c3e50;
+  margin: 0;
+  min-height: 100vh;
+}
+
+.modal-body h1,
+h5,
+p {
+  font-size: 0.9rem;
+  /* font-weight: bold; */
+  margin-bottom: 20px;
+}
+
+
+/* === NAVBAR === */
+.navbar {
+  background: linear-gradient(90deg, #2c3e50 60%, #16a085 100%);
+  box-shadow: 0 2px 8px rgba(44, 62, 80, 0.08);
+}
+
+.navbar-brand,
+.nav-link {
+  color: #fff !important;
+  font-weight: 600;
+  letter-spacing: 1px;
+  transition: color 0.2s;
+}
+
+.nav-link:hover,
+.navbar-brand:hover {
+  color: #ffd700 !important;
+}
+
+/* === CONTAINERS & PANELS === */
+.container-fluid {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding: 30px 20px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(44, 62, 80, 0.07);
+}
+
+#overview {
+  border: 2px dashed #2980b9;
+}
+
+#treemap {
+  border: 2px dashed #27ae60;
+}
+
+#chart {
+  border: 2px dashed #8e44ad;
+}
+
+/* === MAP & SIDEBAR === */
+#mapID {
+  height: 700px;
+  border: 2px solid #ddd;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 12px rgba(44, 62, 80, 0.08);
+  background: #eaf6f6;
+  position: relative;
+}
+
+#mapTitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  width: 350px;
+  height: 48px;
+  position: absolute;
+  top: 30px;
+  left: 20px;
+  background-color: #fff;
+  color: #16a085;
+  padding: 10px 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(44, 62, 80, 0.10);
+  z-index: 1000;
+  border: 1.5px solid #16a085;
+}
+
+#mapOption {
+  position: absolute;
+  top: 90px;
+  left: 20px;
+  width: 350px;
+  height: 350px;
+  min-height: 400px;
+  background-color: #fff;
+  border-radius: 8px;
+  z-index: 1000;
+  box-shadow: 0 2px 12px rgba(44, 62, 80, 0.10);
+  border: 1.5px solid #16a085;
+  padding: 20px 18px 18px 18px;
+}
+
+.slider input[type="range"] {
+  width: 90%;
+}
+
+/*BOROUGH OPTIONS*/
+.borough-container {
+  position: relative;
+  justify-content: center;
+}
+
+/* === HEADINGS & TEXT === */
+h3,
+h4,
+h5 {
+  color: #16a085;
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  margin-bottom: 18px;
+}
+
+p {
+  color: #34495e;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+
+/* === RESPONSIVE DESIGN === */
+@media (max-width: 900px) {
+
+  #mapTitle,
+  #mapOption {
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90vw;
+    min-width: 0;
+    max-width: 98vw;
+  }
+
+  #mapOption {
+    top: 90px;
+    height: 200px;
+    min-height: 300px;
+    padding: 12px 8px;
+  }
+
+  #mapID {
+    height: 400px;
+  }
+}
+
+@media (max-width: 600px) {
+  .container-fluid {
+    padding: 16px 4px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+  }
+
+  #mapTitle,
+  #mapOption {
+    font-size: 1rem;
+    padding: 8px 4px;
+  }
+
+  .toggle-group {
+    gap: 10px;
+    padding: 6px 0 10px 0;
+  }
+}
+
+/* Chart Styles */
+.chart {
+  margin-bottom: 20px;
+  background: rgb(255, 255, 255);
+  border-radius: 4px;
+  /* padding-left: 30px; */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+  max-height: 350px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  box-shadow: none !important;
+}
+
+.health-chart {
+  padding-left: 100px;
+}
+
+.dc-chart g.row text {
+  fill: #333;
+  font-size: 12px;
+}
+
+/* Center DC.js charts */
+.dc-chart {
+  display: block;
+  margin: 0 auto;
+  float: none;
+}
+
+/* Ensure SVG elements are centered */
+.dc-chart svg {
+  display: block;
+  margin: 0 auto;
+}
+
+.alert {
+  margin: 20px;
+}
+
+/* Legend */
+#mapLegend {
+  position: absolute;
+  top: 500px;
+  right: 1745px;
+  width: 300px;
+  background-color: #fff;
+  border-radius: 8px;
+  z-index: 1000;
+  box-shadow: 0 2px 12px rgba(44, 62, 80, 0.10);
+  border: 1.5px solid #16a085;
+  padding: 15px;
+}
+
+#mapLegend h4 {
+  color: #16a085;
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.legend-color {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  margin-right: 10px;
+  border: 1px solid #ddd;
+}
+
+@media (max-width: 900px) {
+  #mapLegend {
+    right: 50%;
+    transform: translateX(50%);
+    top: 320px;
+    width: 90vw;
+    max-width: 98vw;
+  }
+}
