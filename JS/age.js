@@ -1,5 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
 	const ageL = document.getElementById("age");
+	if (!ageL || typeof dayjs === "undefined") {
+		return;
+	}
 
 	setInterval(() => {
 		const birthTime = dayjs(1000944000000); // Sept 20, 2001 @ 00:00:00 UTC

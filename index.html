@@ -1,247 +1,329 @@
 <!DOCTYPE html>
-<!-- This is the "declaration". Let the browser know it is a HTML file. Important-->
-<html> <!-- Defines the root of an HTML document -->
-    <head> <!-- The start of the website -->
-        <title>
-            L. Su
-        </title>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        
-        <link href='https://fonts.googleapis.com/css?family=Roboto:500,900,100,300,700,400' rel='stylesheet' type='text/css'>
-        <link rel="stylesheet"
-            href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-        <link href="https://fonts.googleapis.com/css?family=Montserrat"
-            rel="stylesheet">
-        <link rel="stylesheet" href="index.css"> <!--Link a file to this file-->
+<html lang="en">
+<head>
+    <title>Loc Su | Computer Science Portfolio</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Portfolio for Loc Su, a computer scientist focused on AI, HPC, reinforcement learning, cybersecurity, and geospatial web development.">
 
-        <script
-            src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
-        <!-- Add this -->
-        <script
-            src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <script
-            src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-        <!-- <script src="index.js"></script>  -->
-        <script src="JS/age.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700,800" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="index.css">
 
-    </head>
-    <body data-spy="scroll" data-target=".navbar" data-offset="50">
-        <nav class="navbar navbar-default navbar-fixed-top" >
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="JS/age.js"></script>
+</head>
+<body id="top" data-spy="scroll" data-target=".navbar" data-offset="80">
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mainNav">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#top">Loc Su <span id="age"></span></a>
+            </div>
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#research">Research</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section id="about" class="section">
+            <div class="container content-grid">
+                <div>
+                    <p class="section-label">About</p>
+                    <h2>Who am I</h2>
+                </div>
+                <div>
+                    <p>
+                        My name is Su Tung Loc (Tony), I am 24 years old, and I am an international
+                        student from Vietnam. I recently graduated with a Master's degree in computer science from
+                        the University of New Mexico, where I also completed my Bachelor's degree in the same field.
+                    </p>
+                    <p>
+                        While pursuing my Master's degree, I focused on some specific fields:
+                    </p>
+                    <ul>
+                        <li>Machine Learning</li>
+                        <li>Artificial Intelligence</li>
+                        <li>HPC</li>
+                        <li>Software Engineering</li>
+                    </ul>
+                    <p>
+                        Additional to my academic journey, I also want to involve myself in more social work. Coming
+                        from a developing country like Vietnam, I have witnessed firsthand the challenges that many
+                        unfortunate families face, particularly in rural areas where education, healthcare, and basic
+                        necessities are limited. Before I came to the U.S. to study, during every summer, my mother and
+                        I regularly joined different social work events to travel to less fortunate areas to contribute
+                        in ways that can make a tangible difference. This inspired me to potentially apply my academic
+                        knowledge in different ways to be part of efforts that can uplift, empower, and leave meaningful
+                        impacts on those who need it most.
+                    </p>
+                    <p style="font-weight: bold;">
+                        You can visit my <a href="assets/LocSu_RESUME_General_06_28.pdf" target="_blank" rel="noopener">CV</a> to see my resume, research papers, and more of my interests.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="section section-alt">
             <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle"
-                        data-toggle="collapse" data-target="#myNavbar">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="#">Loc Su <span
-                            id="age"></span> </a>
-                </div>
-                <div class="collapse navbar-collapse" id="myNavbar">
-                    <ul class="nav navbar-nav navbar-right">
-                        <li class = "nav_item"><a href="#about">About</a></li>
-                        <!-- you can create a html file called who.html and then replace the href="#" to href="who.html" to go to that html page -->
-                        <!-- here dr.yang used an id named "who" to link to the heading later in this same page  -->
-                        <li class = "nav_item"><a href="#cv">CV</a></li>
-                        <!-- do the same for who.html page, but here need what.html -->
-                        <!-- here dr.yang used an id named "what" to link to the heading later in this same page  -->
-                        <li class = "nav_item"><a href="#projects">Projects</a></li>
-                        <!-- do the same for who.html page, but here need where.html -->
-                        <!-- here dr.yang used an id named "where" to link to the heading later in this same page  -->
-                        <li class = "nav_item"><a href="#contact">Contact</a></li>
-                        <!-- do the same for who.html page, but here need where.html -->
-                        <!-- here dr.yang used an id named "where" to link to the heading later in this same page  -->
-                    </ul>                 
-                </div>
-            </div>
-        </nav>
-        <!-- First Container -->
-        <div id="about" class="container-fluid">
-            <h1 class="text-center">About </h1>
-            <p>My name is Su Tung Loc (English name is Tony), 23 years old, and I am an international student from Vietnam. 
-                I am currently majoring in computer science at the University of New Mexico. 
-                Recently, I graduated with a bachelo's degree in computer science. 
-                I started UNM's Computer Science graduate program in Fall 2024.
-            </p>
-            <p>
-                While pursuing my Master degree, I want to focus on some specific field:
-            </p>
-            <ul>
-                <li>Machine Learning</li>
-                <li>Artificial Intelligence</li>
-                <li>Cyber Security</li>
-                <li>Data Analysis</li>
-            <ul>
-        
-            <p>Additional to my academic journey, I also want to involve myself in more social works.
-                Coming from a developing country like Vietnam, I have witnessed firsthand the challenges that many unfornate families face,
-                particularly in rura areas where education, healthcare, and basic necessities is limited. 
-                Before I came to the U.S to study, during every summer, my mother and I regularly joined different social work events to travel to less fortunate areas to contributes in ways that can make a tangible difference. 
-                This inspired me to potentially applied my academic knowledge in different ways to be part of efforts that can uplift, empower, and leave meaningful impacts to those who need it most.  
-            </p>
-            <p style = "font-weight: bold;">You can visit my CV to see my resume, research papers, and more of my interests.</p>
-        
-        </div>
-        <!-- Second Container -->
-        <div id="cv" class="container-fluid">
-            <h1 class="text-center">Curriculum Vitae</h1>
-            <h1> Loc Su </h2>
-            <h2 class = "cv_header">Education</h2>
-            <h4 class = "school"> Peninsula Community College <h4/>
-                <p>Associate in arts (AA) - Software Engineer</p>
-                <p> Winter 2017 - Summer 2019</p>
-                <ul>
-                    <li style = "padding-bottom: 5px"> Volunteered at Dungeness Crab & Seafood Festival Office.</li>
-                    <li style = "padding-bottom: 5px"> Graduated with 3.92 GPA.</li>
-                    <li style = "padding-bottom: 5px"> Dean's List: Spring 2018, Fall 2018, Winter 2019, Spring 2019, Summer 2019.</li>
-                </ul>
-            <h4 class = "school">University of New Mexico</h4>
-                <p>Bachelor in School of Engineering-Software Engineer</p>
-                <p >Fall 2020 - Spring 2024</p>
-                <ul>
-                    <li style = "padding-bottom: 1px"> Minored in Mathematics, Chinese Language</li>
-                    <li> Nominated for the NSLS (National Society of Leadership and Success, Honor Society)</li>
-                    <li> Graduated with 3.88 GPA.</li>
-                    <li> Dean's List of School of Engineering Fall 2020, Spring 2021, Fall 2021, Spring 2022, Fall 2022, Spring 2023, Fall 2023, Spring 2024.</li>
-                </ul>
-
-                <p>Master in School of Engineering - Software Engineer</p>
-                <p>Fall 2024 - TBD</p>
-            <h2 class = "cv_header">Work experience</h2>
-            <h4 class = "jobs">Cashier</h4>
-                <p>Pho Sai Gon / Iowa City, Iowa State, United States</p>
-                <p >September 2019 - March 2020</p>
-                <ul>
-                    <li> Maintained clean, organized, and well-stocked checkout areas with regular attention to displays</li>
-                    <li> •	Resolved guest issues by working with customer service leader or as a customer service and area manager to meet individual needs.</li>
-                    <li> Balanced cash drawer at beginning and end of each shift, investigating and resolving any discrepancies</li>
-                </ul>
-            <h4 class = "jobs">Food Prep Cook</h4>
-                <p>Bao / Iowa City, Iowa State, United States</p>
-                <p >September 2019 - January 2020</p>
-                <ul>
-                    <li> Helped fast-paced kitchen run smoothly by following instructions and handling all prep work for expected daily demand.</li>
-                    <li> Kept kitchen stocked and stations ready, using pre-opening hours to fully prepare for each day's work</li>
-                    <li> Sorted, washed, and stored ingredients in optimal arrangements for easy use during busy periods.</li>
-                </ul>
-            <h4 class = "jobs">Directed Energy x Explora intern</h4>
-                <p>Explora/ Albuquerque, New Mexico, United States</p>
-                <p>June 2024 - August 2024</p>
-                <ul>
-                    <li> Assisting building projects using cutting-edge laser and microwave technology.</li>
-                    <li> Providing guidance and lead future generations in the STEM fields</li>
-                    <li> Working in the clean room.</li>
-                    <li> Operating different MBE tasks such as Electron Microscopy, Diode Analysis, XRD, Photoluminescence spectroscopy</li>
-                </ul>
-            <h4 class = "jobs">Grader</h4>
-                <p>UNM/ Albuquerque, New Mexico, United States</p>
-                <p>September 2024 - On going</p>
-                <ul>
-                    <li>Reviews homework assignments</li>
-                    <li>Assigns grades in accordance with per-established principles, criteria, standards, and procedure</li>
-                    <li>Meets with students regarding homework assignment questions</li>
-                    <li>Performs miscellaneous job-related duties as assigned</li>
-
-                </ul>
-            <h2 class = "cv_header">Skills</h2>
-            <h2>Computer Science</h2>
-                <ul>
-                    <li><strong>Proficient:</strong> Java, C, Python, Linux, Git, C++, HTML/CSS/JavaScript</li>
-                    <li><strong>Familiar:</strong> SQL, Prolog, Haskell, Scheme, R, C#, Assembly, Leaflet, D3, DC, Crossfilter</li>
-                    <li><strong>In progress:</strong> React/Angular, Swift, A.I, ...</li>
-                    <li><strong>Strong knowledge of different DSA, traditional Machine Learning models and complex optimazation algorithm such as Genetic Algorithms</strong></li>
-                    <li>Good documentation management, design optimization. Excellent communication skills.</li>
-                </ul>
-
-                <h2>Electrical Engineering</h2>
-                <ul>
-                    <li><strong>Proficient:</strong> Building complex circuit boards, operating oscilloscopes, programmable signal generators, multimeters, etc.</li>
-                </ul>
-            
-           
-        </div>
-        <!-- Third Container -->
-        <div id="projects" class="container-fluid">
-            <h1 class="text-center">Projects</h1>
-            <div id="myCarousel" class="carousel slide" data-ride="carousel">
-                <!-- Indicators -->
-                <ol class="carousel-indicators">
-                  <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                  <li data-target="#myCarousel" data-slide-to="1"></li>
-                  <li data-target="#myCarousel" data-slide-to="2"></li>
-                </ol>
-            
-                <!-- Wrapper for slides -->
-                <div class="carousel-inner">
-            
-                  <div class="item active">
-                    <img src="Crossfilter_bear.jpg" alt="Los Angeles" style="width:100%;">
-                    <div class="carousel-caption">
-                      <h3>Beer history</h3>
-                    </div>
-                  </div>
-            
-                  <div class="item">
-                    <img src="MarkCluster.png" alt="Chicago" style="width:100%;">
-                    <div class="carousel-caption">
-                      <h3>Bike theft in Philadelphia via mark clustering</h3>
-                    </div>
-                  </div>
-                
-                  <div class="item">
-                    <img src="US-population-density-chloro.png" alt="New York" style="width:100%;">
-                    <div class="carousel-caption">
-                      <h3>US population density</h3>
-                    </div>
-                  </div>
-              
-                </div>
-                
-            
-                <!-- Left and right controls -->
-                <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-                  <span class="glyphicon glyphicon-chevron-left"></span>
-                  <span class="sr-only">Previous</span>
-                </a>
-                <a class="right carousel-control" href="#myCarousel" data-slide="next">
-                  <span class="glyphicon glyphicon-chevron-right"></span>
-                  <span class="sr-only">Next</span>
-                </a>
-              </div>
-              <div>
-                <h1>My Web Mapping Projects</h1>
-                <p><a href="NYCTreeCensusData/index.html">MyWebApp</a></p>
-              </div>
-        </div>
-        <div id="contact" class="container-fluid">
-            <h2 class="text-center">CONTACT</h2>
-            <div class="row">
-                <div class="col-sm-5">
-                <p>Contact us and we'll get back to you within 24 hours.</p>
-                <p><span class="glyphicon glyphicon-map-marker"></span> New Mexico, US</p>
-                <p><span class="glyphicon glyphicon-phone"></span> +1 999 666 999</p>
-                <p><span class="glyphicon glyphicon-envelope"></span> locsu@unm.edu</p>
-                </div>
-                <div class="col-sm-7 slideanim">
-                <div class="row">
-                    <div class="col-sm-6 form-group">
-                    <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
-                    </div>
-                    <div class="col-sm-6 form-group">
-                    <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
-                    </div>
-                </div>
-                <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
-                <div class="row">
-                    <div class="col-sm-12 form-group">
-                    <button class="btn btn-default pull-right" type="submit">Send</button>
-                    </div>
-                </div>
+                <p class="section-label">Skills</p>
+                <h2>Technical Toolkit</h2>
+                <div class="skill-grid">
+                    <article class="skill-card">
+                        <h3>AI and Machine Learning</h3>
+                        <p>Python, PyTorch, TensorFlow, Scikit-learn, YOLO, RT-DETR, OpenCV, Gymnasium, LangChain, RAG, prompt engineering.</p>
+                    </article>
+                    <article class="skill-card">
+                        <h3>Reinforcement Learning</h3>
+                        <p>REINFORCE, PPO, Q-learning, DQN, SARSA, A2C, custom environments, motion planning, control systems.</p>
+                    </article>
+                    <article class="skill-card">
+                        <h3>HPC and Parallel Computing</h3>
+                        <p>Slurm, Spack, Warewulf, Apptainer, Docker, Linux, HPL, HPCG, C, MPI, OpenMP, CUDA.</p>
+                    </article>
+                    <article class="skill-card">
+                        <h3>Web, GIS, and Data</h3>
+                        <p>JavaScript, HTML, CSS, Bootstrap, Leaflet, D3, DC.js, Crossfilter, SQL, NoSQL, Git, Java.</p>
+                    </article>
+                    <article class="skill-card">
+                        <h3>Security and Networking</h3>
+                        <p>Wireshark, Nmap, netcat, Burp Suite, Ghidra, Docker-based network experiments, DDoS analysis.</p>
+                    </article>
+                    <article class="skill-card">
+                        <h3>Tools and Languages</h3>
+                        <p>AWS, Weights and Biases, Anyscale, Foxglove, RViz2, GLIM. Languages: English, Vietnamese, Chinese.</p>
+                    </article>
                 </div>
             </div>
-        </div>
-    </body>
+        </section>
+
+        <section id="projects" class="section">
+            <div class="container">
+                <div class="section-heading">
+                    <div>
+                        <p class="section-label">Projects</p>
+                        <h2>Featured Work</h2>
+                    </div>
+                </div>
+
+                <div class="project-section">
+                    <h3>Software Application</h3>
+                    <div class="project-grid compact-grid">
+                        <article class="project-card">
+                            <div>
+                                <h4>Hexapawn</h4>
+                                <p class="project-tools">Java, JavaFX, heuristic learning</p>
+                                <p>Built a Java game with an adaptive computer opponent that improves through a heuristic learning approach.</p>
+                            </div>
+                        </article>
+                        <article class="project-card">
+                            <div>
+                                <h4>Modulo Time Table Visualization</h4>
+                                <p class="project-tools">Java, JavaFX, data visualization</p>
+                                <p>Created an interactive visualization that turns modular arithmetic multiplication patterns into dynamic geometric forms.</p>
+                            </div>
+                        </article>
+                        <article class="project-card">
+                            <div>
+                                <h4>Live Auction Distribution</h4>
+                                <p class="project-tools">Java, JavaFX, sockets, networking</p>
+                                <p>Developed a networked application for distributing live auction activity across connected clients.</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <div class="project-section">
+                    <h3>Machine Learning / Deep Reinforcement Learning</h3>
+                    <div class="project-grid compact-grid">
+                        <article class="project-card">
+                            <!-- <img src="Crossfilter_bear.jpg" alt="Data dashboard visualization"> -->
+                            <div>
+                                <h4>Reinforcement Learning Experiments</h4>
+                                <p class="project-tools">Python, PyTorch, Gymnasium, Matplotlib</p>
+                                <p>Compared REINFORCE, SARSA, DQN, PPO, and Q-learning approaches for Lunar Lander, Atari Pong, and custom motion planning environments.</p>
+                            </div>
+                        </article>
+                        <article class="project-card">
+                            <div>
+                                <h4>Motion Planning and Dynamical Systems</h4>
+                                <p class="project-tools">Python, PyTorch, Q-learning</p>
+                                <p>Developed a 2D motion planning and vehicle control environment for automatic parking and optimal path navigation.</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <div class="project-section">
+                    <h3>Web Development</h3>
+                    <div class="project-grid compact-grid">
+                        <article class="project-card">
+                            <!-- <img src="MarkCluster.png" alt="Clustered map visualization"> -->
+                            <div>
+                                <h4><a href="MyWebApp/index.html">NYC Tree Census Web Map</a></h4>
+                                <p class="project-tools">Leaflet, D3, DC.js, Crossfilter, Bootstrap</p>
+                                <p>Interactive web map for exploring 2015 NYC Tree Census counts, species, and health status across the five boroughs.</p>
+                            </div>
+                        </article>
+                        <article class="project-card">
+                            <!-- <img src="US-population-density-chloro.png" alt="Choropleth map visualization"> -->
+                            <div>
+                                <h4>Geospatial Visualization Studies</h4>
+                                <p class="project-tools">HTML, CSS, JavaScript, GIS</p>
+                                <p>Created web mapping and choropleth visualizations to explore spatial patterns through interactive browser-based interfaces.</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <div class="project-section">
+                    <h3>HPC</h3>
+                    <div class="project-grid compact-grid">
+                        <article class="project-card">
+                            <div>
+                                <h4>HPL Benchmarking</h4>
+                                <p class="project-tools">Slurm, Bash, Git, OpenMPI, OpenBLAS</p>
+                                <p>Benchmarked a multi-node HPC cluster, tuning build parameters and MPI communication to evaluate peak FLOPS behavior.</p>
+                            </div>
+                        </article>
+                        <article class="project-card">
+                            <div>
+                                <h4>HPCG Benchmarking</h4>
+                                <p class="project-tools">Slurm, Apptainer, OpenMPI, NVIDIA containers</p>
+                                <p>Evaluated CPU and GPU cluster configurations for memory bandwidth, communication overhead, and real-world solver performance.</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <div class="project-section">
+                    <h3>AI Engineering</h3>
+                    <div class="project-grid compact-grid">
+                        <article class="project-card">
+                            <!-- <img src="chicago.jpg" alt="Urban street scene"> -->
+                            <div>
+                                <h4>Driving Assistant</h4>
+                                <p class="project-tools">Python, PyTorch, OpenCV, Hugging Face, YOLO</p>
+                                <p>Built a dash-cam analysis pipeline that detects road objects, produces annotated videos, and generates contextual driving alerts.</p>
+                            </div>
+                        </article>
+                        <article class="project-card">
+                            <div>
+                                <h4>LLM and RAG Tooling</h4>
+                                <p class="project-tools">LangChain, LLMs, RAG, prompt engineering</p>
+                                <p>Explored retrieval and prompt-based AI workflows for building more useful research and automation assistants.</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="research" class="section section-alt">
+            <div class="container">
+                <p class="section-label">Research</p>
+                <h2>Research and Analysis</h2>
+                <div class="list-grid">
+                    <article>
+                        <h3>Countering Block Withholding for Miners</h3>
+                        <p>Developed a theoretical model and simulation to analyze Bitcoin block withholding attacks and miner resource allocation.</p>
+                        <a class="btn btn-paper" href="assets/CS591__Final_project-1.pdf" target="_blank" rel="noopener">Read Paper</a>
+                    </article>
+                    <article>
+                        <h3>Distributed Denial of Service Attacks</h3>
+                        <p>Simulated attack scenarios with Docker containers and evaluated server behavior against high-concurrency traffic.</p>
+                        <a class="btn btn-paper" href="assets/CS544_Cyber_Security_Project_Report-1.pdf" target="_blank" rel="noopener">Read Paper</a>
+                    </article>
+                    <article>
+                        <h3>Analysis of Censorship Evasion Tools</h3>
+                        <p>Evaluated different VPNs, Tor, and Psiphon performance, privacy, and obfuscation capabilities across censorship contexts.</p>
+                        <a class="btn btn-paper" href="assets/Censorship_Evasion_Tools_Paper.pdf" target="_blank" rel="noopener">Read Paper</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience" class="section">
+            <div class="container content-grid">
+                <div>
+                    <p class="section-label">Experience</p>
+                    <h2>Recent Roles</h2>
+                </div>
+                <div class="timeline">
+                    <article>
+                        <h3>AI Research Assistant</h3>
+                        <p class="meta">UNM x Multiply Lab | May 2026 - Present</p>
+                        <p>Researching robotic systems that support scalable and affordable manufacturing of next-generation therapies.</p>
+                    </article>
+                    <article>
+                        <h3>Teaching Assistant</h3>
+                        <p class="meta">University of New Mexico | Aug 2025 - June 2026</p>
+                        <p>Supported instruction, project guidance, teaching materials, student consultations, and grading.</p>
+                    </article>
+                    <article>
+                        <h3>TechDen Sales Assistant</h3>
+                        <p class="meta">University of New Mexico | June 2025 - Aug 2025</p>
+                        <p>Managed product data, inventory records, website listings, and content updates.</p>
+                    </article>
+                    <article>
+                        <h3>Student Engineering Intern</h3>
+                        <p class="meta">Explora x UNM CHTM | May 2024 - Aug 2024</p>
+                        <p>Supported laser and microwave technology projects, STEM outreach, clean room operations, and lab experiments.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="education" class="section section-alt">
+            <div class="container">
+                <p class="section-label">Education</p>
+                <h2>Academic Background</h2>
+                <div class="education-grid">
+                    <article>
+                        <h3>Master of Science in Computer Science</h3>
+                        <p>University of New Mexico | GPA 4.18/4.0</p>
+                    </article>
+                    <article>
+                        <h3>Bachelor of Science in Computer Science</h3>
+                        <p>University of New Mexico | May 2024 | Magna Cum Laude | GPA 3.88/4.0</p>
+                    </article>
+                    <article>
+                        <h3>Associate Degree</h3>
+                        <p>Peninsula College | Aug 2019 | Magna Cum Laude | GPA 3.92/4.0</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section contact-section">
+            <div class="container contact-grid">
+                <div>
+                    <p class="section-label">Contact</p>
+                    <h2>Let us connect.</h2>
+                    <p>I am open to research, internship, software, AI, HPC, and data visualization opportunities.</p>
+                </div>
+                <div class="contact-card">
+                    <p><span class="glyphicon glyphicon-envelope"></span> <a href="mailto:sutungloc200901@gmail.com">sutungloc200901@gmail.com</a></p>
+                    <p><span class="glyphicon glyphicon-link"></span> <a href="https://www.linkedin.com/in/loc-su-93392a191/" target="_blank" rel="noopener">LinkedIn</a></p>
+                    <p><span class="glyphicon glyphicon-map-marker"></span> Albuquerque, New Mexico</p>
+                    <p><span class="glyphicon glyphicon-file"></span> <a href="assets/LocSu_RESUME_General_06_28.pdf" target="_blank" rel="noopener">Resume PDF</a></p>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
 </html>
