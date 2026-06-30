@@ -48,7 +48,7 @@
                 </div>
                 <div>
                     <p>
-                        My name is Su Tung Loc (Tony), I am 24 years old, and I am an international
+                        My name is <strong>Su Tung Loc (Tony)</strong>, I am 24 years old, and I am an international
                         student from Vietnam. I recently graduated with a Master's degree in computer science from
                         the University of New Mexico, where I also completed my Bachelor's degree in the same field.
                     </p>
@@ -72,7 +72,7 @@
                         impacts on those who need it most.
                     </p>
                     <p style="font-weight: bold;">
-                        You can visit my <a href="assets/LocSu_RESUME_General_06_28.pdf" target="_blank" rel="noopener">CV</a> to see my resume, research papers, and more of my interests.
+                        I am currently under OPT, so I do not need a sponsorship. You can visit my <a href="assets/LocSu_RESUME_General_06_28.pdf" target="_blank" rel="noopener">CV</a> to see my resume, research papers, and more of my interests.
                     </p>
                 </div>
             </div>
@@ -104,8 +104,12 @@
                         <p>Wireshark, Nmap, netcat, Burp Suite, Ghidra, Docker-based network experiments, DDoS analysis.</p>
                     </article>
                     <article class="skill-card">
-                        <h3>Tools and Languages</h3>
-                        <p>AWS, Weights and Biases, Anyscale, Foxglove, RViz2, GLIM. Languages: English, Vietnamese, Chinese.</p>
+                        <h3>Languages</h3>
+                        <p>English, Vietnamese, Chinese.</p>
+                    </article>
+                    <article class="skill-card">
+                        <h3>Others</h3>
+                        <p>AWS, Weights and Biases, Anyscale, Foxglove, RViz2, GLIM.</p>
                     </article>
                 </div>
             </div>
@@ -123,6 +127,20 @@
                 <div class="project-section">
                     <h3>Software Application</h3>
                     <div class="project-grid compact-grid">
+                        <article class="project-card">
+                            <div>
+                                <h4>Scrabble</h4>
+                                <p class="project-tools">Java, JavaFX, DSA</p>
+                                <p>Built a Java application for playing the classic word game Scrabble.</p>
+                            </div>
+                        </article>
+                        <article class="project-card">
+                            <div>
+                                <h4>Domino</h4>
+                                <p class="project-tools">Java, JavaFX</p>
+                                <p>Built a Java application for playing the classic word game Domino.</p>
+                            </div>
+                        </article>
                         <article class="project-card">
                             <div>
                                 <h4>Hexapawn</h4>
@@ -144,6 +162,13 @@
                                 <p>Developed a networked application for distributing live auction activity across connected clients.</p>
                             </div>
                         </article>
+                        <article class="project-card">
+                            <div>
+                                <h4>Live Disease Spread Simulation</h4>
+                                <p class="project-tools">Java, JavaFX, Threads, Concurrency</p>
+                                <p>Developed a networked application for simulating and visualizing the spread of diseases in a networked environment.</p>
+                            </div>
+                        </article>
                     </div>
                 </div>
 
@@ -163,6 +188,13 @@
                                 <h4>Motion Planning and Dynamical Systems</h4>
                                 <p class="project-tools">Python, PyTorch, Q-learning</p>
                                 <p>Developed a 2D motion planning and vehicle control environment for automatic parking and optimal path navigation.</p>
+                            </div>
+                        </article>
+                        <article class="project-card">
+                            <div>
+                                <h4>Atari Pong using PPO</h4>
+                                <p class="project-tools">Python, PyTorch, OpenCV, Gymnasium</p>
+                                <p>A state-of-the-art deep reinforcement learning algorithm that train an agent in playing Pong game</p>
                             </div>
                         </article>
                     </div>
@@ -195,14 +227,14 @@
                     <div class="project-grid compact-grid">
                         <article class="project-card">
                             <div>
-                                <h4>HPL Benchmarking</h4>
+                                <h4><a href="assets/HPC_benchmarking/HPL_benchmarking.pdf" target="_blank" rel="noopener">HPL Benchmarking</a></h4>
                                 <p class="project-tools">Slurm, Bash, Git, OpenMPI, OpenBLAS</p>
                                 <p>Benchmarked a multi-node HPC cluster, tuning build parameters and MPI communication to evaluate peak FLOPS behavior.</p>
                             </div>
                         </article>
                         <article class="project-card">
                             <div>
-                                <h4>HPCG Benchmarking</h4>
+                                <h4><a href="assets/HPC_benchmarking/HPCG_benchmarking.pdf" target="_blank" rel="noopener">HPCG Benchmarking</a></h4>
                                 <p class="project-tools">Slurm, Apptainer, OpenMPI, NVIDIA containers</p>
                                 <p>Evaluated CPU and GPU cluster configurations for memory bandwidth, communication overhead, and real-world solver performance.</p>
                             </div>
@@ -216,18 +248,37 @@
                         <article class="project-card">
                             <!-- <img src="chicago.jpg" alt="Urban street scene"> -->
                             <div>
-                                <h4>Driving Assistant</h4>
+                                <h4>
+                                    <a class="project-slide-trigger" data-toggle="collapse" href="#aiDrivingAssistantSlides" role="button" aria-expanded="false" aria-controls="aiDrivingAssistantSlides">
+                                        AI Driving Assistant
+                                    </a>
+                                </h4>
                                 <p class="project-tools">Python, PyTorch, OpenCV, Hugging Face, YOLO</p>
                                 <p>Built a dash-cam analysis pipeline that detects road objects, produces annotated videos, and generates contextual driving alerts.</p>
                             </div>
                         </article>
                         <article class="project-card">
                             <div>
-                                <h4>LLM and RAG Tooling</h4>
+                                <h4>Obsidian RAG Chatbot</h4>
+                                <p class="project-status"><span class="status-badge status-in-progress">In Progress</span></p>
                                 <p class="project-tools">LangChain, LLMs, RAG, prompt engineering</p>
-                                <p>Explored retrieval and prompt-based AI workflows for building more useful research and automation assistants.</p>
+                                <p>Developing a LangChain-based chatbot that can access my Obsidian notes and answer questions using the knowledge stored in my personal vault.</p>
                             </div>
                         </article>
+                    </div>
+                    <div class="collapse project-slide-panel" id="aiDrivingAssistantSlides">
+                        <div class="slide-embed-wrap">
+                            <iframe
+                                src="https://docs.google.com/presentation/d/1zJuhm9S9zLAZ89XRMYuU1wTQf0tZI3D3LGBMM4LLcgk/embed?start=false&loop=false&delayms=3000"
+                                frameborder="0"
+                                width="960"
+                                height="569"
+                                allowfullscreen="true"
+                                mozallowfullscreen="true"
+                                webkitallowfullscreen="true"
+                                title="AI Driving Assistant Google Slides">
+                            </iframe>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -278,6 +329,11 @@
                         <h3>TechDen Sales Assistant</h3>
                         <p class="meta">University of New Mexico | June 2025 - Aug 2025</p>
                         <p>Managed product data, inventory records, website listings, and content updates.</p>
+                    </article>
+                    <article>
+                        <h3>Student Grader</h3>
+                        <p class="meta"> University of New Mexico | May 2024 - May 2025</p>
+                        <p>Evaluated student assignments and provided feedback to improve learning outcomes.</p>
                     </article>
                     <article>
                         <h3>Student Engineering Intern</h3>

@@ -229,6 +229,50 @@ a:focus {
   font-size: 18px;
 }
 
+.project-status {
+  margin: 0 0 8px;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 2px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.2px;
+}
+
+.status-in-progress {
+  color: #8a4b00;
+  background: #ffe8c2;
+  border: 1px solid #f3c37a;
+}
+
+.project-slide-trigger {
+  cursor: pointer;
+  display: inline-block;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.project-slide-panel {
+  margin-top: 16px;
+}
+
+.slide-embed-wrap {
+  overflow: hidden;
+  border: 1px solid #d9e0df;
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+.slide-embed-wrap iframe {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  min-height: 280px;
+}
+
 .project-tools,
 .meta {
   color: #63717a;
