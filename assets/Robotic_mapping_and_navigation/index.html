@@ -145,10 +145,11 @@
             font-size: 0.96rem;
         }
 
-        video {
+        .video-frame {
             display: block;
             width: 100%;
             aspect-ratio: 16 / 9;
+            border: 0;
             background: #111827;
         }
 
@@ -191,10 +192,14 @@
                     <h2>Merge Visualization Trailexclusion</h2>
                     <p>GLIM-based mapping output focused on merged visualization behavior.</p>
                 </div>
-                <video controls preload="metadata">
-                    <source src="Merge_visualization_trailexclusion.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
+                <iframe
+                    class="video-frame"
+                    src="https://www.youtube.com/embed/zf-sk0h_QYQ"
+                    title="Merge Visualization Trailexclusion video"
+                    loading="lazy"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen>
+                </iframe>
             </article>
 
             <article class="video-card">
@@ -202,10 +207,14 @@
                     <h2>Visualization Centroid Closeup</h2>
                     <p>Close-up view of the centroid visualization in the mapping workflow.</p>
                 </div>
-                <video controls preload="metadata">
-                    <source src="visualization_centroid_closeup.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
+                <iframe
+                    class="video-frame"
+                    src="https://www.youtube.com/embed/04M3JqefQRY"
+                    title="Visualization Centroid Closeup video"
+                    loading="lazy"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen>
+                </iframe>
             </article>
         </section>
     </main>
