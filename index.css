@@ -322,6 +322,121 @@ a:focus {
   color: #0b6b7a;
 }
 
+.chatbot-toggle {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 1200;
+  border: 0;
+  border-radius: 999px;
+  padding: 12px 18px;
+  background: #0b6b7a;
+  color: #ffffff;
+  font-weight: 700;
+  box-shadow: 0 14px 28px rgba(11, 107, 122, 0.25);
+}
+
+.chatbot-toggle:hover,
+.chatbot-toggle:focus {
+  background: #084d58;
+}
+
+.chatbot-panel {
+  position: fixed;
+  right: 24px;
+  bottom: 82px;
+  width: min(360px, calc(100vw - 28px));
+  max-height: min(70vh, 520px);
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  border: 1px solid #d9e0df;
+  border-radius: 12px;
+  box-shadow: 0 16px 32px rgba(21, 48, 58, 0.18);
+  z-index: 1200;
+}
+
+.chatbot-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  border-bottom: 1px solid #d9e0df;
+}
+
+.chatbot-header h3 {
+  margin: 0;
+  font-size: 17px;
+  font-weight: 800;
+}
+
+.chatbot-close {
+  border: 0;
+  background: transparent;
+  color: #63717a;
+  font-size: 24px;
+  line-height: 1;
+}
+
+.chatbot-messages {
+  display: grid;
+  gap: 10px;
+  padding: 14px 16px;
+  overflow-y: auto;
+}
+
+.chatbot-bubble {
+  max-width: 92%;
+  padding: 10px 12px;
+  border-radius: 10px;
+  font-size: 14px;
+  line-height: 1.5;
+  white-space: pre-wrap;
+}
+
+.chatbot-bubble-user {
+  justify-self: end;
+  background: #0b6b7a;
+  color: #ffffff;
+}
+
+.chatbot-bubble-bot {
+  justify-self: start;
+  background: #f2f6f8;
+  color: #1f2933;
+}
+
+.chatbot-form {
+  margin-top: auto;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 8px;
+  padding: 12px 14px 14px;
+  border-top: 1px solid #d9e0df;
+}
+
+.chatbot-form input {
+  width: 100%;
+  border: 1px solid #c9d3d8;
+  border-radius: 7px;
+  padding: 10px 12px;
+}
+
+.chatbot-form button {
+  border: 0;
+  border-radius: 7px;
+  padding: 10px 14px;
+  background: #0b6b7a;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.chatbot-form button:hover,
+.chatbot-form button:focus {
+  background: #084d58;
+}
+
 @media (max-width: 991px) {
   .content-grid,
   .contact-grid,
@@ -349,5 +464,17 @@ a:focus {
 
   .section h2 {
     font-size: 28px;
+  }
+
+  .chatbot-toggle {
+    right: 14px;
+    bottom: 14px;
+  }
+
+  .chatbot-panel {
+    right: 14px;
+    bottom: 68px;
+    width: calc(100vw - 28px);
+    max-height: 72vh;
   }
 }

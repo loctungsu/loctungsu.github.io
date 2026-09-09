@@ -14,6 +14,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <script src="JS/age.js"></script>
+    <script src="JS/chatbot.js" defer></script>
     <script defer src="https://cloud.umami.is/script.js" data-website-id="856e6ed3-f8a1-4c4a-9b4a-3c6b09ad4653"></script>
 </head>
 <body id="top" data-spy="scroll" data-target=".navbar" data-offset="80">
@@ -398,5 +399,22 @@
             </div>
         </section>
     </main>
+
+    <button id="chatbotToggle" class="chatbot-toggle" type="button" aria-expanded="false" aria-controls="chatbotPanel">
+        Ask Loc's AI
+    </button>
+
+    <section id="chatbotPanel" class="chatbot-panel" aria-live="polite" hidden>
+        <header class="chatbot-header">
+            <h3>Portfolio Assistant</h3>
+            <button id="chatbotClose" class="chatbot-close" type="button" aria-label="Close chatbot">&times;</button>
+        </header>
+        <div id="chatbotMessages" class="chatbot-messages"></div>
+        <form id="chatbotForm" class="chatbot-form">
+            <label class="sr-only" for="chatbotInput">Ask a question</label>
+            <input id="chatbotInput" type="text" placeholder="Ask about skills, projects, research..." autocomplete="off" required>
+            <button type="submit">Send</button>
+        </form>
+    </section>
 </body>
 </html>
