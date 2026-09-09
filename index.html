@@ -14,6 +14,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <script src="JS/age.js"></script>
+    <script src="JS/chatbotContent.js"></script>
+    <script src="JS/chatbot.js"></script>
     <script defer src="https://cloud.umami.is/script.js" data-website-id="856e6ed3-f8a1-4c4a-9b4a-3c6b09ad4653"></script>
 </head>
 <body id="top" data-spy="scroll" data-target=".navbar" data-offset="80">
@@ -398,5 +400,23 @@
             </div>
         </section>
     </main>
+
+    <button id="chatbot-toggle" class="chatbot-toggle" aria-label="Open portfolio assistant">💬 Ask about my work</button>
+    <section id="chatbot-panel" class="chatbot-panel" aria-live="polite" aria-label="Portfolio chatbot" aria-hidden="true">
+        <header class="chatbot-header">
+            <strong>Portfolio Assistant</strong>
+            <button id="chatbot-close" class="chatbot-close" aria-label="Close chatbot">×</button>
+        </header>
+        <div id="chatbot-messages" class="chatbot-messages">
+            <article class="chatbot-message chatbot-message-bot">
+                Ask me about projects, research, skills, and experience shown on this website.
+            </article>
+        </div>
+        <form id="chatbot-form" class="chatbot-form">
+            <label class="sr-only" for="chatbot-input">Ask a question</label>
+            <textarea id="chatbot-input" rows="2" maxlength="500" placeholder="Example: What AI projects are highlighted?"></textarea>
+            <button type="submit" class="btn btn-primary">Send</button>
+        </form>
+    </section>
 </body>
 </html>
